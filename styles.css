@@ -1526,11 +1526,12 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .hstat__suffix { font-size: clamp(0.78rem, 2.6vw, 1rem); }
   .hstat__label { font-size: clamp(0.76rem, 2.8vw, 0.95rem); }
 
-  /* 고민 카드(2열): 세로 길게 + 글자·아이콘 축소로 캡션 안 잘리게 */
-  .showcase-card__frame { aspect-ratio: 3 / 4; }
-  /* 캡션: 내용 높이에 맞춰(잘림 방지) + 하단 여백 확보 */
+  /* 고민 카드(2열): 프레임 세로 길게 */
+  .showcase-card__frame { aspect-ratio: 3 / 4.5; }
+  /* 캡션: min-height로 4개 카드 높이 통일 → 아이콘 시작점 동일 + 위 정렬(잘림 방지·하단 여백) */
   .showcase-card__cap {
-    display: flex; flex-direction: column; align-items: center;
+    min-height: clamp(9.5rem, 38vw, 11.5rem);
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
     padding: clamp(0.9rem, 3.5vw, 1.4rem) clamp(0.85rem, 3.5vw, 1.35rem) clamp(1.1rem, 4.5vw, 1.6rem);
   }
   .showcase-card__ico { width: clamp(40px, 11vw, 50px); height: clamp(40px, 11vw, 50px); margin-bottom: 0.5rem; }
