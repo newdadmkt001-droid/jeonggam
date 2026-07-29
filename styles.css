@@ -1443,7 +1443,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .hero__actions { justify-content: center; }
   .hero__right { padding: 0; }
   .hero__right::before { display: none; }
-  .hero__desc { white-space: normal; text-align: center; margin-top: clamp(0.6rem, 2.5vw, 1.1rem); }
+  .hero__desc { white-space: normal; text-align: center; margin-top: clamp(0.6rem, 2.5vw, 1.1rem); font-size: clamp(1.32rem, 5vw, 1.6rem); line-height: 1.5; }
   /* 쇼케이스: 좌우 → 상하 스택, 고정 해제 */
   .showcase__wrap { grid-template-columns: 1fr; gap: clamp(1.75rem, 5vw, 2.5rem); }
   .showcase__head { position: static; top: auto; margin-bottom: clamp(2rem, 8vw, 3rem); }
@@ -1456,7 +1456,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* 모바일 */
 @media (max-width: 600px) {
-  :root { --header-h: 64px; }
+  :root { --header-h: 64px; --section-py: clamp(3.75rem, 9vw, 5rem); }
   .card-grid, .worry-grid, .team-grid, .review-grid, .feature-grid, .process, .check-grid { grid-template-columns: 1fr; }
   .doda-card:nth-child(even) { margin-top: 0; }
   .cf-row, .cf-row--top { grid-template-columns: 1fr; }
