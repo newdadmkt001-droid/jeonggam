@@ -1369,6 +1369,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* --- Back to top --- */
 .to-top {
+  display: none;
   position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); z-index: 90;
   width: 48px; height: 48px; border-radius: 50%;
   background: var(--white); border: 1px solid var(--line); color: #111;
