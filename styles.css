@@ -1233,12 +1233,11 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* --- 성과 (딥그린 + 워터마크 + 중앙 문서 이미지) --- */
 .research { position: relative; overflow: hidden; background: #26240F; color: #fff; }
-/* 은은한 배경 패턴 (골드 크로스해치) */
+/* 은은한 배경 패턴 (골드 도트 그리드) */
 .research::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background-image:
-    repeating-linear-gradient(45deg, rgba(217,195,152,0.05) 0 1px, transparent 1px 18px),
-    repeating-linear-gradient(-45deg, rgba(217,195,152,0.05) 0 1px, transparent 1px 18px);
+  background-image: radial-gradient(rgba(217,195,152,0.09) 1px, transparent 1.7px);
+  background-size: 26px 26px;
 }
 .research__wm {
   position: absolute; z-index: 0; pointer-events: none; white-space: nowrap;
