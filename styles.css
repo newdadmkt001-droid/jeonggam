@@ -1563,7 +1563,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   /* 6. 고민 카드: 제목·설명 글자 키우고 설명 3줄 (전부 모바일) */
   .showcase-card__title { font-size: clamp(1.45rem, 6.2vw, 1.95rem); letter-spacing: -0.02em; word-break: keep-all; line-height: 1.25; margin-top: 0.35rem; }
   .showcase-card__cap {
-    min-height: clamp(6.5rem, 24vw, 8.5rem);
+    top: 0;
+    min-height: 0;
     justify-content: center;
     padding: clamp(1.1rem, 4.5vw, 1.5rem) clamp(1rem, 5vw, 1.6rem);
   }
