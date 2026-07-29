@@ -817,15 +817,18 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .boxpoint::before { animation: none; transform: scaleX(1); }
 }
 /* 다크 섹션: 박스가 사라진 순간 글자 흰색, 박스가 덮을 땐 검정 (박스 애니메이션과 동기화) */
-.section--black .boxpoint, .research .boxpoint { animation: boxTextDark 3.6s ease-in-out infinite; }
-.research .boxpoint::before { background: #ECDFBF; }
+.section--black .boxpoint { animation: boxTextDark 3.6s ease-in-out infinite; }
+/* 성과 섹션: 글자는 흰색 고정, 하이라이트는 반투명 */
+.research .boxpoint { color: #fff; }
+.research .boxpoint::before { background: rgba(236, 223, 191, 0.32); }
 @keyframes boxTextDark {
   0%        { color: #fff; }
   3%, 84%   { color: #000; }
   92%, 100% { color: #fff; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .section--black .boxpoint, .research .boxpoint { animation: none; color: #000; }
+  .section--black .boxpoint { animation: none; color: #000; }
+  .research .boxpoint { animation: none; color: #fff; }
 }
 .faq2__intro.is-visible .boxpoint::before,
 .check2-head.is-visible .boxpoint::before,
