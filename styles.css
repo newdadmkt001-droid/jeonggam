@@ -702,7 +702,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .rquote__debt b { color: var(--gold-500); font-weight: var(--fw-bold); }
 
 /* 후기 케이스카드 (사진 + 태그 + 진행 전/후 채무 + 후기 + 탕감률 도장) */
-.rcase { position: relative; display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+.rcase { position: relative; display: flex; flex-direction: column; background: #fff; border: 1px solid #E2E4E8; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
 .rcase__photo { position: relative; aspect-ratio: 4 / 3.1; background-size: cover; background-position: center 22%; }
 .rcase__body { display: flex; flex-direction: column; padding: clamp(1.4rem, 2.2vw, 1.9rem); }
 .rcase__tags { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
@@ -713,7 +713,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .rcase__debt-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.95rem; }
 .rcase__debt-row dt { color: var(--text-muted); }
 .rcase__debt-row dd { font-weight: var(--fw-bold); color: #111; }
-.rcase__quote { font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); padding-top: 1.1rem; border-top: 1px solid var(--line); }
+.rcase__quote { font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); padding-top: 1.1rem; border-top: 1px solid #E2E4E8; }
 .rcase__stamp {
   position: absolute; top: 50%; left: 50%; z-index: 2; opacity: 0;
   transform: translate(-50%, -50%) rotate(-5deg);
@@ -1211,8 +1211,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .contact5-form .cf-field label { font-size: 0.85rem; font-weight: var(--fw-semibold); color: #111; }
 .contact5-form .req { color: #e0524d; }
 .contact5-form .cf-field input, .contact5-form .cf-select {
-  width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--line); border-radius: 8px;
-  background: #f8f9fb; color: var(--text); font-family: var(--font); font-size: 1rem;
+  width: 100%; padding: 0.85rem 1rem; border: 1px solid #E2E4E8; border-radius: 8px;
+  background: #fff; color: var(--text); font-family: var(--font); font-size: 1rem;
 }
 .contact5-form .cf-field input:focus, .contact5-form .cf-select:focus { outline: none; border-color: var(--gold-500); background: #fff; }
 .contact5-form .cf-select { appearance: none; -webkit-appearance: none; cursor: pointer; }
@@ -1233,6 +1233,13 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* --- 성과 (딥그린 + 워터마크 + 중앙 문서 이미지) --- */
 .research { position: relative; overflow: hidden; background: #26240F; color: #fff; }
+/* 은은한 배경 패턴 (골드 크로스해치) */
+.research::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(217,195,152,0.05) 0 1px, transparent 1px 18px),
+    repeating-linear-gradient(-45deg, rgba(217,195,152,0.05) 0 1px, transparent 1px 18px);
+}
 .research__wm {
   position: absolute; z-index: 0; pointer-events: none; white-space: nowrap;
   font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 500;
@@ -1601,6 +1608,10 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .hero__overlay {
     background: linear-gradient(180deg, rgba(8,10,16,0.62) 0%, rgba(8,10,16,0.74) 100%);
   }
+
+  /* 체크리스트 상·하단 바깥선 삭제 (행 사이 구분선은 유지) */
+  .checklist2 { border-top: none; }
+  .checkrow:last-child { border-bottom: none; }
 
   /* 프로세스 5단계 제목 글자 키움 */
   .process__title { font-size: clamp(1.35rem, 5.2vw, 1.6rem); }
