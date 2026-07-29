@@ -1654,7 +1654,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 @media (max-width: 600px) {
   /* 하단 고정 상담 바 */
   .mbar {
-    display: flex; align-items: stretch; justify-content: space-between;
+    display: none; align-items: stretch; justify-content: space-between;
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
     background: #1B1F35; color: #fff; box-shadow: 0 -6px 20px rgba(0,0,0,0.22);
   }
@@ -1673,7 +1673,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   /* 우측 하단 세로 퀵메뉴 (바 위에 위치) */
   .mquick {
     display: flex; flex-direction: column;
-    position: fixed; right: 0.7rem; bottom: 4.75rem; z-index: 95;
+    position: fixed; right: 0.7rem; bottom: 1rem; z-index: 95;
     background: #1B1F35; border-radius: 20px; overflow: hidden;
     box-shadow: 0 12px 28px rgba(0,0,0,0.32);
   }
@@ -1687,8 +1687,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .mquick__label { font-size: 0.78rem; font-weight: 600; letter-spacing: -0.02em; }
 
   /* 맨 위로 버튼은 좌측 하단(바 위)으로, 푸터는 바 높이만큼 여백 확보 */
-  .to-top { left: 0.7rem; right: auto; bottom: 4.75rem; }
-  .footer { padding-bottom: 5rem; }
+  .to-top { left: 0.7rem; right: auto; bottom: 1rem; }
 }
 
 /* 큰 화면 상한 */
