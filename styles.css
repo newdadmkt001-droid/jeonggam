@@ -1257,8 +1257,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .research::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background-image:
-    radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1.4px),
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.022) 0, rgba(255,255,255,0.022) 1px, transparent 1px, transparent 8px);
+    radial-gradient(rgba(255,255,255,0.028) 1px, transparent 1.4px),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.012) 0, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 8px);
   background-size: 20px 20px, auto;
 }
 .research__wm {
@@ -1687,7 +1687,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .mquick__label { font-size: 0.78rem; font-weight: 600; letter-spacing: -0.02em; }
 
   /* 맨 위로 버튼은 좌측 하단(바 위)으로, 푸터는 바 높이만큼 여백 확보 */
-  .to-top { left: 0.7rem; right: auto; bottom: 1rem; }
+  .to-top { right: 0.7rem; left: auto; bottom: 1rem; }
 }
 
 /* 큰 화면 상한 */
