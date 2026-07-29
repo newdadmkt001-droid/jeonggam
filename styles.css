@@ -1232,7 +1232,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 @media (max-width: 560px) { .contact5-form .cf-grid2 { grid-template-columns: 1fr; } }
 
 /* --- 성과 (딥그린 + 워터마크 + 중앙 문서 이미지) --- */
-.research { position: relative; overflow: hidden; background: #26240F; color: #fff; }
+.research { position: relative; overflow: hidden; background: #16150A; color: #fff; }
 /* 은은한 배경 패턴 (골드 도트 그리드) */
 .research::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
