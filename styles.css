@@ -1710,7 +1710,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .checklist2__note-btn::before { display: none; }
 }
 @media (max-width: 640px) {
-  .checklist2__note { flex-direction: column; align-items: flex-start; text-align: left; }
+  .checklist2__note { flex-direction: column; align-items: center; text-align: center; }
+  .checklist2__note + .checklist2__note { margin-top: clamp(0.6rem, 2.5vw, 1rem); }
   .checklist2__note-btn { align-self: stretch; justify-content: center; }
 }
 /* 우측 원형 체크: 순차 파도로 무한 반복 */
