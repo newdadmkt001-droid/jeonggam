@@ -754,7 +754,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* 후기 카드가 아래 통계(다크) 섹션 배경에 겹치게 */
 #reviews { position: relative; z-index: 2; padding-bottom: 0; }
-#stats { position: relative; z-index: 1; margin-top: clamp(-28rem, -26vw, -19rem); padding-top: clamp(21rem, 29vw, 27rem); background: #0C0B04; }
+#stats { position: relative; z-index: 1; margin-top: clamp(-28rem, -26vw, -19rem); padding-top: clamp(21rem, 29vw, 27rem); background: #12110A; }
 /* 모바일: 카드가 1열로 쌓이므로 겹침 해제 (일반 스택) */
 @media (max-width: 900px) {
   #reviews { padding-bottom: var(--section-py); }
