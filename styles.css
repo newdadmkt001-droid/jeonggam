@@ -1527,8 +1527,9 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .hstat__suffix { font-size: clamp(0.78rem, 2.6vw, 1rem); }
   .hstat__label { font-size: clamp(0.76rem, 2.8vw, 0.95rem); }
 
-  /* 고민 카드(2열): 프레임 세로 길게 */
-  .showcase-card__frame { aspect-ratio: 3 / 4.5; }
+  /* 고민 카드(1열): 한 줄에 하나, 프레임 세로 축소 */
+  .showcase__grid { grid-template-columns: 1fr; gap: clamp(1rem, 4vw, 1.5rem); }
+  .showcase-card__frame { aspect-ratio: 16 / 10; }
   /* 캡션: min-height로 4개 카드 높이 통일 → 아이콘 시작점 동일 + 위 정렬(잘림 방지·하단 여백) */
   .showcase-card__cap {
     min-height: clamp(9.5rem, 38vw, 11.5rem);
@@ -1562,8 +1563,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   /* 6. 고민 카드: 제목·설명 글자 키우고 설명 3줄 (전부 모바일) */
   .showcase-card__title { font-size: clamp(1.2rem, 5vw, 1.55rem); letter-spacing: -0.02em; word-break: keep-all; line-height: 1.25; margin-top: 0.35rem; }
   .showcase-card__cap {
-    min-height: clamp(9rem, 36vw, 11.5rem);
-    padding: clamp(0.6rem, 2.6vw, 1rem) clamp(0.5rem, 2vw, 0.85rem) clamp(0.85rem, 3.4vw, 1.3rem);
+    min-height: clamp(5.5rem, 20vw, 7.5rem);
+    padding: clamp(0.7rem, 3vw, 1.1rem) clamp(1rem, 5vw, 1.6rem) clamp(0.9rem, 3.6vw, 1.4rem);
   }
   .showcase-card__ico { margin-bottom: 0.4rem; }
   .showcase-card__text { font-size: clamp(0.85rem, 3.6vw, 1.05rem); line-height: 1.5; word-break: keep-all; margin-top: 0.4rem; }
