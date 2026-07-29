@@ -1541,6 +1541,9 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .showcase-card__text { font-size: clamp(0.76rem, 3.2vw, 0.92rem); line-height: 1.5; margin-top: 0.3rem; }
 }
 
+/* 모바일 전용 줄바꿈: 기본 숨김 (600px 이하에서 표시) */
+.br-mo { display: none; }
+
 /* === 모바일 추가 요청 === */
 @media (max-width: 600px) {
   /* 1. 오시는 길 제목 가운데 */
@@ -1570,9 +1573,6 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .contact5__intro { text-align: center; }
   .contact5__sub { margin-left: auto; margin-right: auto; }
 }
-
-/* 모바일 전용 줄바꿈: 기본 숨김 (모바일 미디어쿼리에서 표시) */
-.br-mo { display: none; }
 
 /* 큰 화면 상한 */
 @media (min-width: 1440px) { :root { --container: 1240px; } }
