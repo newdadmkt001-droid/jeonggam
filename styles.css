@@ -1623,6 +1623,52 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .research__cite-title { line-height: 1.45; }
 }
 
+/* ===== 모바일 하단 고정 UI (세로 퀵메뉴 + 상담 바) ===== */
+.mquick, .mbar { display: none; }
+@keyframes mbarDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(198,166,103,0.6); }
+  50%      { box-shadow: 0 0 0 6px rgba(198,166,103,0); }
+}
+@media (max-width: 600px) {
+  /* 하단 고정 상담 바 */
+  .mbar {
+    display: flex; align-items: stretch; justify-content: space-between;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+    background: #1B1F35; color: #fff; box-shadow: 0 -6px 20px rgba(0,0,0,0.22);
+  }
+  .mbar__msg {
+    display: flex; align-items: center; gap: 0.5rem; flex: 1; min-width: 0;
+    padding: 0 0.9rem; font-size: clamp(0.8rem, 3.4vw, 0.95rem); font-weight: 600;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .mbar__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold-500); flex-shrink: 0; animation: mbarDot 1.8s ease-in-out infinite; }
+  .mbar__cta {
+    display: flex; align-items: center; gap: 0.35rem; flex-shrink: 0;
+    padding: 0.95rem 1.1rem; background: var(--gold-500); color: #111;
+    font-weight: 800; font-size: clamp(0.82rem, 3.4vw, 0.95rem); white-space: nowrap;
+  }
+
+  /* 우측 하단 세로 퀵메뉴 (바 위에 위치) */
+  .mquick {
+    display: flex; flex-direction: column;
+    position: fixed; right: 0.7rem; bottom: 4rem; z-index: 95;
+    background: #1B1F35; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.32);
+  }
+  .mquick__item {
+    display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+    padding: 0.65rem 0.7rem; min-width: 56px; color: #fff; text-align: center;
+  }
+  .mquick__item + .mquick__item { border-top: 1px solid rgba(255,255,255,0.12); }
+  .mquick__ico { color: var(--gold-400); display: grid; place-items: center; height: 24px; }
+  .mquick__ico svg { width: 22px; height: 22px; }
+  .mquick__label { font-size: 0.68rem; font-weight: 600; letter-spacing: -0.02em; }
+
+  /* 맨 위로 버튼은 좌측 하단(바 위)으로, 푸터는 바 높이만큼 여백 확보 */
+  .to-top { left: 0.7rem; right: auto; bottom: 4rem; }
+  .footer { padding-bottom: 4.25rem; }
+}
+
 /* 큰 화면 상한 */
 @media (min-width: 1440px) { :root { --container: 1240px; } }
 
