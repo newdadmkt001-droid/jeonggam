@@ -1674,7 +1674,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   font-size: clamp(1.14rem, 1.6vw, 1.38rem); color: rgba(255,255,255,0.82); line-height: 1.55;
 }
 /* 연한 회색 박스 변형 (첫 번째 안내) */
-.checklist2__note--light { background: #EDEEF1; border-color: #E2E4E8; color: #333; }
+.checklist2__note--light { background: #EDEEF1; border-color: #E2E4E8; color: #333; justify-content: center; text-align: center; }
 .checklist2__note-text { flex: 1; }
 .checklist2__note-text b { color: var(--gold-400); font-weight: var(--fw-bold); }
 .checklist2__note-btn {
