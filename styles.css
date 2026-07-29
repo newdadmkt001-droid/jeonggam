@@ -1565,6 +1565,10 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
   /* 모바일 전용 줄바꿈 */
   .br-mo { display: inline; }
+
+  /* 상담 문의 좌측 인트로 가운데 정렬 (모바일) */
+  .contact5__intro { text-align: center; }
+  .contact5__sub { margin-left: auto; margin-right: auto; }
 }
 
 /* 모바일 전용 줄바꿈: 기본 숨김 (모바일 미디어쿼리에서 표시) */
