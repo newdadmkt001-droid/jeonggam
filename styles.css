@@ -1292,9 +1292,9 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .location2__info { display: grid; gap: clamp(1.5rem, 3vw, 2.25rem); align-content: start; margin-top: calc(var(--fs-h2) * 1.2 + clamp(1.75rem, 3.5vw, 3rem)); }
 /* 지도를 오른쪽 화면 끝까지 확장 */
 .location2__map { margin-right: calc((100% - 100vw) / 2); }
-.locinfo__block { display: grid; gap: 0.3rem; }
+.locinfo__block { display: grid; gap: 0.15rem; }
 .locinfo__label { font-size: 0.95rem; font-weight: var(--fw-bold); color: #111; }
-.locinfo__label--sm { font-size: clamp(1.25rem, 1.7vw, 1.45rem); font-weight: 800; margin-bottom: 0.35rem; }
+.locinfo__label--sm { font-size: clamp(1.25rem, 1.7vw, 1.45rem); font-weight: 800; margin-bottom: 0; }
 .locinfo__tel { font-size: clamp(1.7rem, 2.8vw, 2.2rem); font-weight: var(--fw-bold); color: var(--gold-600); line-height: 1.1; letter-spacing: 0.01em; }
 .locinfo__tel2 { font-size: clamp(1.15rem, 1.8vw, 1.45rem); font-weight: var(--fw-semibold); color: #111; }
 .locinfo__hours p { font-size: 1rem; color: var(--text); margin: 0.2rem 0; }
@@ -1437,7 +1437,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .map-ph { min-height: 300px; }
   /* 히어로: 좌/우 → 상/하 스택 */
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero__left { min-height: 56vh; padding: calc(var(--header-h) + 2.5rem) clamp(1.5rem, 6vw, 3rem) 3rem; }
+  .hero__left { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: calc(var(--header-h) + 2.25rem) clamp(1.5rem, 6vw, 3rem); }
   .hero__content { text-align: center; margin-left: auto; margin-right: auto; }
   .hero__logo { margin-left: auto; margin-right: auto; }
   .hero__actions { justify-content: center; }
