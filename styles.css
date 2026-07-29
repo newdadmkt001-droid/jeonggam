@@ -1673,7 +1673,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   /* 우측 하단 세로 퀵메뉴 (바 위에 위치) */
   .mquick {
     display: flex; flex-direction: column;
-    position: fixed; right: 0.7rem; bottom: 1rem; z-index: 95;
+    position: fixed; right: 0.7rem; bottom: 4.75rem; z-index: 95;
     background: #1A1A1A; border-radius: 20px; overflow: hidden;
     box-shadow: 0 12px 28px rgba(0,0,0,0.32);
   }
