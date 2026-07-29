@@ -1487,8 +1487,9 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .research__text, .research__cite-text { margin-left: auto; margin-right: auto; }
   .research__right { align-items: center; text-align: center; }
 
-  /* 통계: 상하 여백 동일·축소 (그리드 상단 마진 제거로 위 여백 = 아래 여백) */
-  #reviews { padding-bottom: 0; }
+  /* 후기 ↔ 통계 사이 여백 확보 */
+  #reviews { padding-bottom: clamp(2.5rem, 9vw, 4rem); }
+  /* 통계: 상하 여백 동일 (그리드 상단 마진 제거) */
   #stats { margin-top: 0; padding-top: clamp(2.5rem, 9vw, 4rem); padding-bottom: clamp(2.5rem, 9vw, 4rem); }
   #stats .agstat-grid { margin-top: 0; }
 
