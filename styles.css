@@ -1546,6 +1546,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .br-mo { display: none; }
 /* PC 전용 줄바꿈: 기본 표시 (600px 이하에서 숨김) */
 .br-pc { display: inline; }
+/* 모바일 전용 포인트색: 기본은 상속(흰색 등), 600px 이하에서만 골드 */
+.pt-mo { color: inherit; }
 
 /* === 모바일 추가 요청 === */
 @media (max-width: 600px) {
@@ -1578,6 +1580,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   /* 모바일 전용 줄바꿈 */
   .br-mo { display: inline; }
   .br-pc { display: none; }
+  /* 모바일 전용 포인트색(골드) */
+  .pt-mo { color: var(--gold-500); }
 
   /* 본문 문구: 크기·줄간격 전부 "대한민국에서 매년…"과 동일하게 통일 */
   .section-text,
