@@ -1554,14 +1554,14 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .research__title { font-size: clamp(1.75rem, 7vw, 2.3rem); }
   /* 5. 영문 워터마크 15px 위로 (사람과 덜 겹치게) */
   .lawyer__bgtext { top: -0.45rem; }
-  /* 6. 고민 카드 제목 세줄 방지 + 캡션 여백 축소 (전부 모바일) */
-  .showcase-card__title { font-size: clamp(0.72rem, 3.2vw, 0.98rem); letter-spacing: -0.03em; word-break: keep-all; line-height: 1.3; margin-top: 0.2rem; }
+  /* 6. 고민 카드: 제목 키우고 설명 3줄 (전부 모바일) */
+  .showcase-card__title { font-size: clamp(1.05rem, 4.4vw, 1.35rem); letter-spacing: -0.02em; word-break: keep-all; line-height: 1.25; margin-top: 0.3rem; }
   .showcase-card__cap {
-    min-height: clamp(6.5rem, 27vw, 8.5rem);
-    padding: clamp(0.55rem, 2.4vw, 0.9rem) clamp(0.5rem, 2vw, 0.85rem) clamp(0.65rem, 2.8vw, 1rem);
+    min-height: clamp(8rem, 33vw, 10.5rem);
+    padding: clamp(0.6rem, 2.6vw, 1rem) clamp(0.5rem, 2vw, 0.85rem) clamp(0.8rem, 3.2vw, 1.2rem);
   }
   .showcase-card__ico { margin-bottom: 0.35rem; }
-  .showcase-card__text { font-size: clamp(0.72rem, 2.9vw, 0.88rem); word-break: keep-all; margin-top: 0.2rem; }
+  .showcase-card__text { font-size: clamp(0.74rem, 3vw, 0.9rem); line-height: 1.5; word-break: keep-all; margin-top: 0.35rem; }
 
   /* 모바일 전용 줄바꿈 */
   .br-mo { display: inline; }
