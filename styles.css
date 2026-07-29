@@ -1421,7 +1421,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .hero__desc { white-space: normal; text-align: center; margin-top: clamp(0.6rem, 2.5vw, 1.1rem); }
   /* 쇼케이스: 좌우 → 상하 스택, 고정 해제 */
   .showcase__wrap { grid-template-columns: 1fr; gap: clamp(1.75rem, 5vw, 2.5rem); }
-  .showcase__head { position: static; top: auto; margin-bottom: 0.5rem; }
+  .showcase__head { position: static; top: auto; margin-bottom: clamp(2rem, 8vw, 3rem); }
   .showcase__grid { grid-template-columns: 1fr 1fr; gap: clamp(1rem, 2.5vw, 1.5rem); }
   .showcase__grid::before, .showcase__grid::after { display: none; }
   .showcase-card:nth-child(even) { margin-top: 0; }
