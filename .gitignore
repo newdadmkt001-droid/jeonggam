@@ -1,0 +1,11 @@
+# 대용량 원본 영상 (GitHub 100MB 제한 초과, hero.mp4로 대체됨)
+*.mov
+메인.mov
+
+# OS / 편집기
+.DS_Store
+Thumbs.db
+
+# 의존성 / 배포 캐시
+node_modules/
+.vercel/
