@@ -1188,7 +1188,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .quickmenu__ico svg { width: 24px; height: 24px; }
 .quickmenu__label { font-size: 0.82rem; font-weight: var(--fw-semibold); }
 @media (max-width: 640px) {
-  .quickmenu { top: auto; bottom: 5.5rem; transform: none; right: 0.75rem; }
+  .quickmenu { display: none; }
   .quickmenu__item { min-width: 64px; padding: 0.75rem 0.5rem; }
   .quickmenu__ico svg { width: 20px; height: 20px; }
   .quickmenu__label { font-size: 0.72rem; }
@@ -1561,13 +1561,18 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   /* 5. 영문 워터마크 15px 위로 (사람과 덜 겹치게) */
   .lawyer__bgtext { top: -0.45rem; }
   /* 6. 고민 카드: 제목·설명 글자 키우고 설명 3줄 (전부 모바일) */
-  .showcase-card__title { font-size: clamp(1.2rem, 5vw, 1.55rem); letter-spacing: -0.02em; word-break: keep-all; line-height: 1.25; margin-top: 0.35rem; }
+  .showcase-card__title { font-size: clamp(1.45rem, 6.2vw, 1.95rem); letter-spacing: -0.02em; word-break: keep-all; line-height: 1.25; margin-top: 0.35rem; }
   .showcase-card__cap {
-    min-height: clamp(5.5rem, 20vw, 7.5rem);
-    padding: clamp(0.7rem, 3vw, 1.1rem) clamp(1rem, 5vw, 1.6rem) clamp(0.9rem, 3.6vw, 1.4rem);
+    min-height: clamp(6.5rem, 24vw, 8.5rem);
+    justify-content: center;
+    padding: clamp(1.1rem, 4.5vw, 1.5rem) clamp(1rem, 5vw, 1.6rem);
+  }
+  /* 오버레이 더 진하게 (글자 가독성) */
+  .showcase-card__frame::after {
+    background: linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.94) 30%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0.72) 75%, rgba(0,0,0,0.55) 100%);
   }
   .showcase-card__ico { margin-bottom: 0.4rem; }
-  .showcase-card__text { font-size: clamp(0.85rem, 3.6vw, 1.05rem); line-height: 1.5; word-break: keep-all; margin-top: 0.4rem; }
+  .showcase-card__text { font-size: clamp(1rem, 4.3vw, 1.28rem); line-height: 1.5; word-break: keep-all; margin-top: 0.4rem; }
 
   /* 모바일 전용 줄바꿈 */
   .br-mo { display: inline; }
