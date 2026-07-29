@@ -800,7 +800,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .boxpoint::before { animation: none; transform: scaleX(1); }
 }
 /* 다크 섹션: 박스가 사라진 순간 글자 흰색, 박스가 덮을 땐 검정 (박스 애니메이션과 동기화) */
-.section--black .boxpoint, .research .boxpoint, .hero .boxpoint { animation: boxTextDark 3.6s ease-in-out infinite; }
+.section--black .boxpoint, .research .boxpoint { animation: boxTextDark 3.6s ease-in-out infinite; }
 .research .boxpoint::before { background: #ECDFBF; }
 @keyframes boxTextDark {
   0%        { color: #fff; }
@@ -808,7 +808,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   92%, 100% { color: #fff; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .section--black .boxpoint, .research .boxpoint, .hero .boxpoint { animation: none; color: #000; }
+  .section--black .boxpoint, .research .boxpoint { animation: none; color: #000; }
 }
 .faq2__intro.is-visible .boxpoint::before,
 .check2-head.is-visible .boxpoint::before,
