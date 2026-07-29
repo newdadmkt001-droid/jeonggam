@@ -1543,6 +1543,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* 모바일 전용 줄바꿈: 기본 숨김 (600px 이하에서 표시) */
 .br-mo { display: none; }
+/* PC 전용 줄바꿈: 기본 표시 (600px 이하에서 숨김) */
+.br-pc { display: inline; }
 
 /* === 모바일 추가 요청 === */
 @media (max-width: 600px) {
@@ -1557,21 +1559,35 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .research__title { font-size: clamp(1.75rem, 7vw, 2.3rem); }
   /* 5. 영문 워터마크 15px 위로 (사람과 덜 겹치게) */
   .lawyer__bgtext { top: -0.45rem; }
-  /* 6. 고민 카드: 제목 키우고 설명 3줄 (전부 모바일) */
-  .showcase-card__title { font-size: clamp(1.05rem, 4.4vw, 1.35rem); letter-spacing: -0.02em; word-break: keep-all; line-height: 1.25; margin-top: 0.3rem; }
+  /* 6. 고민 카드: 제목·설명 글자 키우고 설명 3줄 (전부 모바일) */
+  .showcase-card__title { font-size: clamp(1.2rem, 5vw, 1.55rem); letter-spacing: -0.02em; word-break: keep-all; line-height: 1.25; margin-top: 0.35rem; }
   .showcase-card__cap {
-    min-height: clamp(8rem, 33vw, 10.5rem);
-    padding: clamp(0.6rem, 2.6vw, 1rem) clamp(0.5rem, 2vw, 0.85rem) clamp(0.8rem, 3.2vw, 1.2rem);
+    min-height: clamp(9rem, 36vw, 11.5rem);
+    padding: clamp(0.6rem, 2.6vw, 1rem) clamp(0.5rem, 2vw, 0.85rem) clamp(0.85rem, 3.4vw, 1.3rem);
   }
-  .showcase-card__ico { margin-bottom: 0.35rem; }
-  .showcase-card__text { font-size: clamp(0.74rem, 3vw, 0.9rem); line-height: 1.5; word-break: keep-all; margin-top: 0.35rem; }
+  .showcase-card__ico { margin-bottom: 0.4rem; }
+  .showcase-card__text { font-size: clamp(0.85rem, 3.6vw, 1.05rem); line-height: 1.5; word-break: keep-all; margin-top: 0.4rem; }
 
   /* 모바일 전용 줄바꿈 */
   .br-mo { display: inline; }
+  .br-pc { display: none; }
+
+  /* 고민 섹션 인트로 줄간격 축소 */
+  .showcase__head .section-text { line-height: 1.4; }
 
   /* 상담 문의 좌측 인트로 가운데 정렬 (모바일) */
   .contact5__intro { text-align: center; }
   .contact5__sub { margin-left: auto; margin-right: auto; }
+
+  /* 프로세스 5단계 제목 글자 키움 */
+  .process__title { font-size: clamp(1.35rem, 5.2vw, 1.6rem); }
+
+  /* 변호사 소개 헤딩 글자 키움 */
+  .lawyer__heading { font-size: clamp(1.6rem, 6.6vw, 2.1rem); }
+
+  /* 성과 섹션 제목 줄간격 살짝 늘림 */
+  .research__title,
+  .research__cite-title { line-height: 1.45; }
 }
 
 /* 큰 화면 상한 */
