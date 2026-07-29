@@ -800,7 +800,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .boxpoint::before { animation: none; transform: scaleX(1); }
 }
 /* 다크 섹션: 박스가 사라진 순간 글자 흰색, 박스가 덮을 땐 검정 (박스 애니메이션과 동기화) */
-.section--black .boxpoint, .research .boxpoint { animation: boxTextDark 3.6s ease-in-out infinite; }
+.section--black .boxpoint, .research .boxpoint, .hero .boxpoint { animation: boxTextDark 3.6s ease-in-out infinite; }
 .research .boxpoint::before { background: #ECDFBF; }
 @keyframes boxTextDark {
   0%        { color: #fff; }
@@ -808,7 +808,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   92%, 100% { color: #fff; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .section--black .boxpoint, .research .boxpoint { animation: none; color: #000; }
+  .section--black .boxpoint, .research .boxpoint, .hero .boxpoint { animation: none; color: #000; }
 }
 .faq2__intro.is-visible .boxpoint::before,
 .check2-head.is-visible .boxpoint::before,
@@ -1591,6 +1591,11 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   /* 상담 문의 좌측 인트로 가운데 정렬 (모바일) */
   .contact5__intro { text-align: center; }
   .contact5__sub { margin-left: auto; margin-right: auto; }
+
+  /* 메인(히어로) 배경 오버레이 더 진하게 → 흰 글자 가독성 (모바일: 가운데 정렬이라 균일 세로 그라데이션) */
+  .hero__overlay {
+    background: linear-gradient(180deg, rgba(8,10,16,0.62) 0%, rgba(8,10,16,0.74) 100%);
+  }
 
   /* 프로세스 5단계 제목 글자 키움 */
   .process__title { font-size: clamp(1.35rem, 5.2vw, 1.6rem); }
