@@ -1575,6 +1575,9 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   /* 고민 섹션 인트로 줄간격 축소 */
   .showcase__head .section-text { line-height: 1.4; }
 
+  /* 본문(section-text) 글자 전체 키움 */
+  .section-text { font-size: clamp(1.15rem, 4vw, 1.35rem); }
+
   /* 상담 문의 좌측 인트로 가운데 정렬 (모바일) */
   .contact5__intro { text-align: center; }
   .contact5__sub { margin-left: auto; margin-right: auto; }
