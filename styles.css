@@ -1540,6 +1540,23 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .showcase-card__text { font-size: clamp(0.76rem, 3.2vw, 0.92rem); line-height: 1.5; margin-top: 0.3rem; }
 }
 
+/* === 모바일 추가 요청 === */
+@media (max-width: 600px) {
+  /* 1. 오시는 길 제목 가운데 */
+  .location2__title { text-align: center; }
+  /* 2. 망설이는 이유(FAQ) 가운데 */
+  .faq2__intro { text-align: center; }
+  .faq2__intro .section-text { margin-left: auto; margin-right: auto; }
+  /* 3. FAQ 제목 ↔ 목록 여백 늘림 */
+  .faq2__grid { row-gap: clamp(1.75rem, 6vw, 2.75rem); }
+  /* 4. "공식 등록된 도산전문변호사" 제목 키움 */
+  .research__title { font-size: clamp(1.75rem, 7vw, 2.3rem); }
+  /* 5. 영문 워터마크 15px 위로 (사람과 덜 겹치게) */
+  .lawyer__bgtext { top: -0.45rem; }
+  /* 6. 고민 카드 제목 세줄 방지 (글자 축소 + 단어 안 쪼개짐) */
+  .showcase-card__title { font-size: clamp(0.85rem, 3.9vw, 1.15rem); letter-spacing: -0.02em; word-break: keep-all; }
+}
+
 /* 큰 화면 상한 */
 @media (min-width: 1440px) { :root { --container: 1240px; } }
 
