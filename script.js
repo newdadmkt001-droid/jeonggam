@@ -17,7 +17,7 @@
 
   /* ---- 0-2. 구글시트 전송 ---- */
   /* ↓↓↓ 앱스스크립트 웹앱 URL(.../exec)을 아래 따옴표 안에 붙여넣으세요 ↓↓↓ */
-  var SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbwVKpHSg1U1v19vxtNtXRirN11DfZFWddF1SkPH6GDHIc84ZWhGxRGPBf0OHHSiHGxq/exec";
+  var SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbwIb4Lkv8BNis4nV9qXZLPZyr3Hc2KEO7UT1Eym3wNnElY6NvwEzlKiTxCFzLGoK4PR/exec";
   function postLead(data) {
     if (!SHEET_ENDPOINT) return;
     try {
