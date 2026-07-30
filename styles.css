@@ -1193,7 +1193,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 /* --- 우측 고정 퀵메뉴 --- */
 .quickmenu {
   position: fixed; right: clamp(0.6rem, 1.4vw, 1.4rem); top: 50%; transform: translateY(-50%);
-  z-index: 90; display: flex; flex-direction: column;
+  z-index: 90; display: none; flex-direction: column;
   background: #fff; border-radius: 16px; box-shadow: 0 12px 34px rgba(0,0,0,0.14);
   overflow: hidden;
 }
@@ -1647,7 +1647,22 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 }
 
 /* ===== 모바일 하단 고정 UI (세로 퀵메뉴 + 상담 바) ===== */
-.mquick, .mbar { display: none; }
+.mbar { display: none; }
+/* 세로 퀵메뉴 (PC·모바일 공통) */
+.mquick {
+  display: flex; flex-direction: column;
+  position: fixed; right: 0.7rem; bottom: 4.75rem; z-index: 95;
+  background: #1A1A1A; border-radius: 20px; overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.32);
+}
+.mquick__item {
+  display: flex; flex-direction: column; align-items: center; gap: 0.25rem;
+  padding: 0.9rem 0.95rem; min-width: 68px; color: #fff; text-align: center;
+}
+.mquick__item + .mquick__item { border-top: 1px solid rgba(255,255,255,0.12); }
+.mquick__ico { color: var(--gold-400); display: grid; place-items: center; height: 28px; }
+.mquick__ico svg { width: 27px; height: 27px; }
+.mquick__label { font-size: 0.78rem; font-weight: 600; letter-spacing: -0.02em; }
 @keyframes mbarDot {
   0%, 100% { box-shadow: 0 0 0 0 rgba(198,166,103,0.6); }
   50%      { box-shadow: 0 0 0 6px rgba(198,166,103,0); }
@@ -1671,24 +1686,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
     font-weight: 800; font-size: clamp(0.95rem, 4vw, 1.12rem); white-space: nowrap;
   }
 
-  /* 우측 하단 세로 퀵메뉴 (바 위에 위치) */
-  .mquick {
-    display: flex; flex-direction: column;
-    position: fixed; right: 0.7rem; bottom: 4.75rem; z-index: 95;
-    background: #1A1A1A; border-radius: 20px; overflow: hidden;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.32);
-  }
-  .mquick__item {
-    display: flex; flex-direction: column; align-items: center; gap: 0.25rem;
-    padding: 0.9rem 0.95rem; min-width: 68px; color: #fff; text-align: center;
-  }
-  .mquick__item + .mquick__item { border-top: 1px solid rgba(255,255,255,0.12); }
-  .mquick__ico { color: var(--gold-400); display: grid; place-items: center; height: 28px; }
-  .mquick__ico svg { width: 27px; height: 27px; }
-  .mquick__label { font-size: 0.78rem; font-weight: 600; letter-spacing: -0.02em; }
-
-  /* 맨 위로 버튼은 좌측 하단(바 위)으로, 푸터는 바 높이만큼 여백 확보 */
-  .to-top { right: 0.7rem; left: auto; bottom: 1rem; }
+  /* (세로 퀵메뉴는 공통 규칙으로 이동 — PC·모바일 동일) */
 }
 
 /* 큰 화면 상한 */
