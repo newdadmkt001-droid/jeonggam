@@ -1741,27 +1741,30 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .mquick__label { font-size: 1rem; }
 }
 @keyframes mbarDot {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(198,166,103,0.6); }
-  50%      { box-shadow: 0 0 0 6px rgba(198,166,103,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.6); }
+  50%      { box-shadow: 0 0 0 6px rgba(255,255,255,0); }
 }
 @media (max-width: 600px) {
-  /* 하단 고정 상담 바 */
+  /* 하단 고정 상담 바 (파란색) */
   .mbar {
-    display: none; align-items: stretch; justify-content: space-between;
+    display: flex; align-items: stretch; justify-content: space-between;
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
-    background: #1B1F35; color: #fff; box-shadow: 0 -6px 20px rgba(0,0,0,0.22);
+    background: #2D52F5; color: #fff; box-shadow: 0 -6px 20px rgba(0,0,0,0.22);
   }
   .mbar__msg {
     display: flex; align-items: center; gap: 0.55rem; flex: 1; min-width: 0;
     padding: 0 1rem; font-size: clamp(0.92rem, 4vw, 1.1rem); font-weight: 600;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
-  .mbar__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold-500); flex-shrink: 0; animation: mbarDot 1.8s ease-in-out infinite; }
+  .mbar__dot { width: 9px; height: 9px; border-radius: 50%; background: #fff; flex-shrink: 0; animation: mbarDot 1.8s ease-in-out infinite; }
   .mbar__cta {
     display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0;
-    padding: 1.15rem 1.35rem; background: var(--gold-500); color: #111;
+    padding: 1.15rem 1.35rem; background: #1C3AD9; color: #fff;
     font-weight: 800; font-size: clamp(0.95rem, 4vw, 1.12rem); white-space: nowrap;
   }
+
+  /* 하단 바에 가려지지 않게 푸터 여백 확보 */
+  .footer { padding-bottom: 4.5rem; }
 
   /* (세로 퀵메뉴는 공통 규칙으로 이동 — PC·모바일 동일) */
 }
