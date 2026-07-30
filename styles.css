@@ -1477,7 +1477,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .map-ph { min-height: 300px; }
   /* 히어로: 좌/우 → 상/하 스택 */
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero__left { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: calc(var(--header-h) + 2.25rem) clamp(1.5rem, 6vw, 3rem); }
+  .hero__left { min-height: 54vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: calc(var(--header-h) + 1.4rem) clamp(1.5rem, 6vw, 3rem); }
   .hero__content { text-align: center; margin-left: auto; margin-right: auto; }
   .hero__logo { margin-left: auto; margin-right: auto; height: clamp(23px, 5.6vw, 30px); margin-bottom: clamp(1.1rem, 3.8vw, 1.6rem); }
   .hero__title { font-size: clamp(1.78rem, 7.8vw, 2.25rem); margin-bottom: 1.1rem; }
@@ -1723,6 +1723,15 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .mquick__ico { color: var(--gold-400); display: grid; place-items: center; height: 28px; }
 .mquick__ico svg { width: 27px; height: 27px; }
 .mquick__label { font-size: 0.78rem; font-weight: 600; letter-spacing: -0.02em; }
+/* 모바일: 퀵메뉴 반짝이는 글로우 (주목도) */
+@keyframes mquickGlow {
+  0%, 100% { box-shadow: 0 12px 28px rgba(0,0,0,0.32), 0 0 0 0 rgba(198,166,103,0); }
+  50%      { box-shadow: 0 12px 28px rgba(0,0,0,0.32), 0 0 22px 5px rgba(198,166,103,0.65); }
+}
+@media (max-width: 600px) {
+  .mquick { border-color: rgba(198,166,103,0.75); animation: mquickGlow 1.6s ease-in-out infinite; }
+}
+@media (prefers-reduced-motion: reduce) { .mquick { animation: none; } }
 /* PC: 퀵메뉴 크게 */
 @media (min-width: 601px) {
   .mquick { right: clamp(1rem, 1.6vw, 1.8rem); top: 50%; bottom: auto; transform: translateY(-50%); border-radius: 24px; }
