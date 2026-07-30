@@ -1971,7 +1971,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .cmodal__agree .req { color: #e0483d; }
 .cmodal__submit {
   width: 100%; padding: 0.95rem; border: none; border-radius: 8px;
-  background: linear-gradient(105deg, #2e7d5a 0%, #1c2947 100%); color: #fff; font-weight: 800; font-size: 1.02rem;
+  background: var(--gold-500); color: #1B1F35; font-weight: 800; font-size: 1.02rem;
   font-family: var(--font); cursor: pointer; transition: filter 0.2s;
 }
 .cmodal__submit:hover { filter: brightness(1.05); }
