@@ -1667,6 +1667,19 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
     background: linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.96) 34%, rgba(0,0,0,0.82) 54%, rgba(0,0,0,0.48) 74%, transparent 95%);
   }
 
+  /* 안내 배너: 아이콘+제목(2줄)은 한 행, 서브텍스트는 아래 한 줄 */
+  .benefit-note {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "ico title" "sub sub";
+    align-items: center;
+    column-gap: clamp(0.85rem, 3vw, 1.2rem); row-gap: 0.55rem;
+  }
+  .benefit-note__ico { grid-area: ico; }
+  .benefit-note__text { display: contents; }
+  .benefit-note__title { grid-area: title; }
+  .benefit-note__sub { grid-area: sub; white-space: nowrap; font-size: clamp(0.62rem, 2.9vw, 0.85rem); }
+
   /* 프로세스 5단계 제목 글자 키움 */
   .process__title { font-size: clamp(1.35rem, 5.2vw, 1.6rem); }
 
