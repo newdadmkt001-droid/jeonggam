@@ -526,12 +526,11 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 /* 고민 섹션 하단 안내 박스 */
 .benefit-note {
   margin-top: clamp(2rem, 4.5vw, 3.5rem);
-  display: flex; flex-direction: column; align-items: center; text-align: center;
-  gap: clamp(0.55rem, 1.4vw, 0.9rem);
+  display: flex; align-items: center; justify-content: center; gap: clamp(1.1rem, 2.5vw, 1.8rem);
   background: #4E1212; border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 14px; padding: clamp(1.4rem, 3vw, 2rem) clamp(1.4rem, 3vw, 2.25rem);
+  border-radius: 14px; padding: clamp(1.3rem, 2.8vw, 1.9rem) clamp(1.4rem, 3vw, 2.25rem);
+  text-align: left;
 }
-.benefit-note__head { display: flex; align-items: center; justify-content: center; gap: clamp(0.9rem, 2vw, 1.4rem); }
 .benefit-note__ico {
   flex-shrink: 0; display: grid; place-items: center;
   width: clamp(52px, 7vw, 64px); height: clamp(52px, 7vw, 64px);
@@ -539,7 +538,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   color: var(--gold-400);
 }
 .benefit-note__ico svg { width: clamp(24px, 3.4vw, 30px); height: auto; }
-.benefit-note__title { font-size: clamp(1.25rem, 2.3vw, 1.7rem); font-weight: 800; color: #fff; margin: 0; letter-spacing: -0.01em; line-height: 1.3; word-break: keep-all; }
+.benefit-note__title { font-size: clamp(1.25rem, 2.3vw, 1.7rem); font-weight: 800; color: #fff; margin: 0 0 0.4rem; letter-spacing: -0.01em; line-height: 1.3; word-break: keep-all; }
 .benefit-note__sub { font-size: clamp(0.95rem, 1.5vw, 1.12rem); color: rgba(255,255,255,0.78); margin: 0; line-height: 1.55; word-break: keep-all; }
 
 /* 이미지 없을 때 폴백(웜 그라데이션 + 라벨) */
