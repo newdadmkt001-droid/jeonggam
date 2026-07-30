@@ -1653,6 +1653,11 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .checklist2 { border-top: none; }
   .checkrow:last-child { border-bottom: none; }
 
+  /* 도다 카드: 모바일 제목 가독성 위해 그라데이션 더 강하게 */
+  .doda-card__frame::after {
+    background: linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.96) 34%, rgba(0,0,0,0.82) 54%, rgba(0,0,0,0.48) 74%, transparent 95%);
+  }
+
   /* 프로세스 5단계 제목 글자 키움 */
   .process__title { font-size: clamp(1.35rem, 5.2vw, 1.6rem); }
 
