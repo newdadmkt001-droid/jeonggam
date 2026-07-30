@@ -1667,9 +1667,9 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   }
 
   /* 안내 배너: [아이콘+제목]은 한 줄(가운데), 서브텍스트는 아래 별도 줄 가운데 */
-  .benefit-note { flex-wrap: wrap; row-gap: 0.7rem; }
+  .benefit-note { flex-wrap: wrap; row-gap: 0.7rem; margin-top: clamp(1rem, 4vw, 1.5rem); padding-left: clamp(0.85rem, 3vw, 1.4rem); padding-right: clamp(0.85rem, 3vw, 1.4rem); }
   .benefit-note__text { display: contents; }
-  .benefit-note__sub { flex-basis: 100%; text-align: center; white-space: nowrap; font-size: clamp(0.62rem, 2.9vw, 0.85rem); }
+  .benefit-note__sub { flex-basis: 100%; text-align: center; white-space: nowrap; font-size: clamp(0.7rem, 3.1vw, 0.92rem); }
 
   /* 프로세스 5단계 제목 글자 키움 */
   .process__title { font-size: clamp(1.35rem, 5.2vw, 1.6rem); }
