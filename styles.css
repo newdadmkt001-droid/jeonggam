@@ -1481,7 +1481,16 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .hero__content { text-align: center; margin-left: auto; margin-right: auto; }
   .hero__logo { margin-left: auto; margin-right: auto; height: clamp(20px, 5vw, 26px); margin-bottom: clamp(1rem, 3.5vw, 1.5rem); }
   .hero__title { font-size: clamp(1.6rem, 7vw, 2rem); margin-bottom: 1rem; }
-  .hero__badges { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+  /* 배지: 2×2 그리드 + 칸 구분선 (예시처럼) */
+  .hero__badges { display: grid; grid-template-columns: 1fr 1fr; gap: 0; width: 100%; padding: 0; overflow: hidden; }
+  .hero__badge {
+    justify-content: center; padding: 0.9rem 0.55rem;
+    font-size: clamp(0.8rem, 3.3vw, 0.95rem);
+    border-right: 1px solid rgba(255,255,255,0.14);
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+  }
+  .hero__badge:nth-child(even) { border-right: none; }
+  .hero__badge:nth-child(n+3) { border-bottom: none; }
   .hero__actions { justify-content: center; }
   .hero__right { padding: 0; }
   .hero__right::before { display: none; }
