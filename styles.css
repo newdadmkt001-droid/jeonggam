@@ -1500,8 +1500,10 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .fab__text { display: none; }
   .fab { padding: 1rem; }
   .about__media { max-width: 100%; }
-  .footer__bar { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
-  .footer__links { gap: 0.5rem 1.25rem; }
+  .footer__bar { flex-direction: column; align-items: center; text-align: center; gap: 1.25rem; }
+  .footer__links { gap: 0.5rem 1.25rem; justify-content: center; }
+  .footer__biz { text-align: center; }
+  .footer__biz p { word-break: keep-all; line-height: 1.75; }
 }
 
 /* === 모바일 마무리 보정 (전 해상도 가로 넘침·잘림 방지) === */
