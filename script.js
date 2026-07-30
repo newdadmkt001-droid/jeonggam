@@ -4,6 +4,17 @@
 (function () {
   "use strict";
 
+  /* ---- 0. 유입페이지 판별 (경로/파라미터 기반) ---- */
+  window.__leadSource = (function () {
+    var p = location.pathname.toLowerCase();
+    if (p.indexOf("cafe") > -1) return "카페";
+    if (p.indexOf("blog") > -1) return "블로그";
+    var q = new URLSearchParams(location.search).get("src");
+    if (q === "cafe") return "카페";
+    if (q === "blog") return "블로그";
+    return "메인";
+  })();
+
   /* ---- 1. 헤더 스크롤 상태 ---- */
   var header = document.getElementById("header");
   if (header) {
