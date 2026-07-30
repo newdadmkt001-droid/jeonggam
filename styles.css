@@ -438,7 +438,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 /* 이미지 하단 그라데이션(제목 오버레이 가독성) */
 .doda-card__frame::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(to top, rgba(0,0,0,0.86) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.12) 55%, transparent 75%);
+  background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.9) 18%, rgba(0,0,0,0.6) 38%, rgba(0,0,0,0.25) 58%, rgba(0,0,0,0.06) 75%, transparent 88%);
 }
 /* 제목: 이미지 안 하단 오버레이 */
 .doda-card__title {
