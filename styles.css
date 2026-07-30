@@ -515,6 +515,16 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .showcase-card__title { font-size: clamp(1.75rem, 3.2vw, 2.3rem); font-weight: var(--fw-bold); margin-top: 0.7rem; letter-spacing: -0.01em; line-height: 1.25; }
 .showcase-card__text { font-size: clamp(1.05rem, 1.35vw, 1.28rem); line-height: 1.55; color: rgba(255,255,255,0.92); margin: 0.6rem auto 0; max-width: 24ch; white-space: normal; }
 
+/* 고민 섹션 하단 안내 박스 */
+.benefit-note {
+  margin-top: clamp(2rem, 4.5vw, 3.5rem);
+  background: #1B1F35; border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px; padding: clamp(1.4rem, 3vw, 2rem) clamp(1.3rem, 3vw, 2.25rem);
+  text-align: center;
+}
+.benefit-note__title { font-size: clamp(1.1rem, 2vw, 1.45rem); font-weight: 800; color: var(--gold-400); margin: 0 0 0.5rem; letter-spacing: -0.01em; }
+.benefit-note__sub { font-size: clamp(0.95rem, 1.5vw, 1.15rem); color: rgba(255,255,255,0.78); margin: 0; }
+
 /* 이미지 없을 때 폴백(웜 그라데이션 + 라벨) */
 .img-ph {
   background-color: #0d0d0d;
