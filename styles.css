@@ -1652,7 +1652,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .mquick {
   display: flex; flex-direction: column;
   position: fixed; right: 0.7rem; bottom: 4.75rem; z-index: 95;
-  background: #1A1A1A; border-radius: 20px; overflow: hidden;
+  background: #000; border-radius: 20px; overflow: hidden;
   border: 1px solid rgba(255,255,255,0.25);
   box-shadow: 0 12px 28px rgba(0,0,0,0.32);
 }
@@ -1666,7 +1666,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .mquick__label { font-size: 0.78rem; font-weight: 600; letter-spacing: -0.02em; }
 /* PC: 퀵메뉴 크게 */
 @media (min-width: 601px) {
-  .mquick { right: clamp(1rem, 1.6vw, 1.8rem); bottom: clamp(1.5rem, 4vw, 2.5rem); border-radius: 24px; }
+  .mquick { right: clamp(1rem, 1.6vw, 1.8rem); top: 50%; bottom: auto; transform: translateY(-50%); border-radius: 24px; }
   .mquick__item { padding: 1.25rem 1.45rem; min-width: 94px; gap: 0.45rem; }
   .mquick__ico { height: 36px; }
   .mquick__ico svg { width: 36px; height: 36px; }
