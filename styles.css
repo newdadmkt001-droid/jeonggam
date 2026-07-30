@@ -1479,13 +1479,13 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero__left { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: calc(var(--header-h) + 2.25rem) clamp(1.5rem, 6vw, 3rem); }
   .hero__content { text-align: center; margin-left: auto; margin-right: auto; }
-  .hero__logo { margin-left: auto; margin-right: auto; height: clamp(20px, 5vw, 26px); margin-bottom: clamp(1rem, 3.5vw, 1.5rem); }
-  .hero__title { font-size: clamp(1.6rem, 7vw, 2rem); margin-bottom: 1rem; }
+  .hero__logo { margin-left: auto; margin-right: auto; height: clamp(23px, 5.6vw, 30px); margin-bottom: clamp(1.1rem, 3.8vw, 1.6rem); }
+  .hero__title { font-size: clamp(1.78rem, 7.8vw, 2.25rem); margin-bottom: 1.1rem; }
   /* 배지: 2×2 그리드 + 칸 구분선 (예시처럼) */
   .hero__badges { display: grid; grid-template-columns: 1fr 1fr; gap: 0; width: 100%; padding: 0; overflow: hidden; }
   .hero__badge {
-    justify-content: center; padding: 0.9rem 0.55rem;
-    font-size: clamp(0.8rem, 3.3vw, 0.95rem);
+    justify-content: center; padding: 0.95rem 0.55rem;
+    font-size: clamp(0.86rem, 3.5vw, 1.02rem);
     border-right: 1px solid rgba(255,255,255,0.14);
     border-bottom: 1px solid rgba(255,255,255,0.14);
   }
@@ -1494,7 +1494,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .hero__actions { justify-content: center; }
   .hero__right { padding: 0; }
   .hero__right::before { display: none; }
-  .hero__desc { white-space: normal; text-align: center; margin-top: clamp(0.6rem, 2.5vw, 1.1rem); font-size: clamp(1.08rem, 4.3vw, 1.32rem); line-height: 1.5; }
+  .hero__desc { white-space: normal; text-align: center; margin-top: clamp(0.6rem, 2.5vw, 1.1rem); font-size: clamp(1.16rem, 4.7vw, 1.44rem); line-height: 1.5; }
   /* 쇼케이스: 좌우 → 상하 스택, 고정 해제 */
   .showcase__wrap { grid-template-columns: 1fr; gap: clamp(1.75rem, 5vw, 2.5rem); }
   .showcase__head { position: static; top: auto; margin-bottom: clamp(2rem, 8vw, 3rem); }
