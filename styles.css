@@ -1477,7 +1477,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   .map-ph { min-height: 300px; }
   /* 히어로: 좌/우 → 상/하 스택 */
   .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero__left { min-height: 54vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: calc(var(--header-h) + 1.4rem) clamp(1.5rem, 6vw, 3rem); }
+  .hero__left { min-height: 46vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: calc(var(--header-h) + 0.75rem) clamp(1.5rem, 6vw, 3rem); }
   .hero__content { text-align: center; margin-left: auto; margin-right: auto; }
   .hero__logo { margin-left: auto; margin-right: auto; height: clamp(23px, 5.6vw, 30px); margin-bottom: clamp(1.1rem, 3.8vw, 1.6rem); }
   .hero__title { font-size: clamp(1.78rem, 7.8vw, 2.25rem); margin-bottom: 1.1rem; }
