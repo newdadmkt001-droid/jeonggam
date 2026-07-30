@@ -409,7 +409,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 /* 히어로 신뢰 배지 박스 (반투명 검정) */
 .hero__badges {
   margin-top: clamp(1.4rem, 2.8vw, 2.2rem);
-  display: inline-flex; flex-wrap: wrap; gap: clamp(0.7rem, 1.8vw, 1.4rem);
+  display: none; flex-wrap: wrap; gap: clamp(0.7rem, 1.8vw, 1.4rem);
   background: rgba(198,166,103,0.32); border: 1px solid rgba(255,255,255,0.2);
   border-radius: 12px; padding: clamp(0.85rem, 1.7vw, 1.15rem) clamp(1.1rem, 2.2vw, 1.6rem);
 }
@@ -855,7 +855,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 /* 다크 섹션: 박스가 사라진 순간 글자 흰색, 박스가 덮을 땐 검정 (박스 애니메이션과 동기화) */
 .section--black .boxpoint { animation: boxTextDark 3.6s ease-in-out infinite; }
 /* 성과 섹션: 글자는 흰색 고정, 하이라이트는 반투명 */
-.research .boxpoint { color: var(--gold-400); }
+.research .boxpoint { color: #fff; }
 .research .boxpoint::before { background: rgba(236, 223, 191, 0.32); }
 @keyframes boxTextDark {
   0%        { color: #fff; }
@@ -864,7 +864,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .section--black .boxpoint { animation: none; color: #000; }
-  .research .boxpoint { animation: none; color: var(--gold-400); }
+  .research .boxpoint { animation: none; color: #fff; }
 }
 .faq2__intro.is-visible .boxpoint::before,
 .check2-head.is-visible .boxpoint::before,
