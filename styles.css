@@ -1950,22 +1950,28 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   box-shadow: 0 30px 80px rgba(0,0,0,0.45); max-height: calc(100dvh - 2rem); overflow: auto;
 }
 .cmodal__close { position: absolute; top: 0.5rem; right: 0.75rem; background: none; border: none; font-size: 1.7rem; line-height: 1; color: #999; cursor: pointer; padding: 0.2rem 0.4rem; }
-.cmodal__title { font-size: clamp(1.2rem, 4.6vw, 1.4rem); font-weight: 800; color: #111; margin: 0 0 0.3rem; text-align: center; }
-.cmodal__sub { font-size: clamp(0.85rem, 3.4vw, 0.92rem); color: #666; margin: 0 0 1.1rem; text-align: center; word-break: keep-all; }
-.cmodal__row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-bottom: 0.65rem; }
-.cmodal__field { display: flex; flex-direction: column; gap: 0.28rem; min-width: 0; }
-.cmodal__field label { font-size: 0.8rem; font-weight: 600; color: #444; }
+.cmodal__eyebrow { display: block; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.02em; color: var(--gold-600); margin-bottom: 0.5rem; }
+.cmodal__title { font-size: clamp(1.4rem, 5.5vw, 1.7rem); font-weight: 800; color: #1B1F35; margin: 0 0 0.55rem; text-align: left; letter-spacing: -0.01em; }
+.cmodal__sub { font-size: clamp(0.86rem, 3.4vw, 0.95rem); color: #667085; margin: 0 0 1.2rem; text-align: left; line-height: 1.55; word-break: keep-all; }
+.cmodal__field { display: flex; flex-direction: column; gap: 0.32rem; min-width: 0; margin-bottom: 0.7rem; }
+.cmodal__field label { font-size: 0.85rem; font-weight: 600; color: #333; }
+.cmodal__field .req { color: #e0483d; }
 .cmodal__field input, .cmodal__field select {
-  width: 100%; padding: 0.6rem 0.7rem; border: 1px solid #E2E4E8; border-radius: 8px;
-  font-size: 0.92rem; font-family: var(--font); background: #fff; color: #111;
+  width: 100%; padding: 0.72rem 0.8rem; border: 1px solid #E2E4E8; border-radius: 8px;
+  font-size: 0.95rem; font-family: var(--font); background: #fff; color: #111;
 }
 .cmodal__field input:focus, .cmodal__field select:focus { outline: none; border-color: var(--gold-500); }
-.cmodal__field select { appearance: none; -webkit-appearance: none; cursor: pointer; }
-.cmodal__agree { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #555; margin: 0.5rem 0 0.9rem; }
-.cmodal__agree input { width: 16px; height: 16px; accent-color: var(--gold-600); flex-shrink: 0; }
+.cmodal__field select {
+  appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 2.3rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 0.85rem center;
+}
+.cmodal__agree { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: #555; margin: 0.6rem 0 1rem; }
+.cmodal__agree input { width: 17px; height: 17px; accent-color: var(--gold-600); flex-shrink: 0; }
+.cmodal__agree .req { color: #e0483d; }
 .cmodal__submit {
-  width: 100%; padding: 0.85rem; border: none; border-radius: 8px;
-  background: var(--gold-500); color: #1B1F35; font-weight: 800; font-size: 1rem;
+  width: 100%; padding: 0.95rem; border: none; border-radius: 8px;
+  background: linear-gradient(105deg, #2e7d5a 0%, #1c2947 100%); color: #fff; font-weight: 800; font-size: 1.02rem;
   font-family: var(--font); cursor: pointer; transition: filter 0.2s;
 }
 .cmodal__submit:hover { filter: brightness(1.05); }
