@@ -1759,9 +1759,9 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   }
   .mbar__dot { width: 9px; height: 9px; border-radius: 50%; background: #fff; flex-shrink: 0; animation: mbarDot 1.8s ease-in-out infinite; }
   .mbar__cta {
-    display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0;
-    padding: 0.75rem 1.1rem; border-radius: 8px; background: #1C3AD9; color: #fff;
-    font-weight: 800; font-size: clamp(0.9rem, 3.9vw, 1.05rem); white-space: nowrap;
+    display: flex; align-items: center; gap: 0.35rem; flex-shrink: 0;
+    padding: 0.55rem 0.95rem; border-radius: 999px; background: #fff; color: #1C3AD9;
+    font-weight: 800; font-size: clamp(0.8rem, 3.3vw, 0.92rem); white-space: nowrap;
   }
 
   /* 하단 바에 가려지지 않게 푸터 여백 확보 */
