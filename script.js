@@ -174,18 +174,37 @@
     requestAnimationFrame(tick);
   }
   if ("IntersectionObserver" in window && counters.length) {
-    var cio = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            cio.unobserve(entry.target);
+    var heroIsMobile = window.matchMedia("(max-width: 600px)").matches;
+    if (heroIsMobile) {
+      /* 모바일: 화면에 보이는 동안 반복 카운트업 */
+      var heroRunAll = function () { counters.forEach(animateCount); };
+      var heroTimer = null;
+      var heroTarget = document.querySelector(".hero__stats") || counters[0];
+      var hio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            heroRunAll();
+            if (!heroTimer) heroTimer = window.setInterval(heroRunAll, 4000);
+          } else if (heroTimer) {
+            window.clearInterval(heroTimer); heroTimer = null;
           }
         });
-      },
-      { threshold: 0.6 }
-    );
-    counters.forEach(function (el) { cio.observe(el); });
+      }, { threshold: 0.4 });
+      hio.observe(heroTarget);
+    } else {
+      var cio = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCount(entry.target);
+              cio.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
+      counters.forEach(function (el) { cio.observe(el); });
+    }
   }
 
   /* ---- 5-2. 통계 숫자 카운트업 (화면에 보이는 동안 반복) ---- */
