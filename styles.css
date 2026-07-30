@@ -518,7 +518,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 /* 고민 섹션 하단 안내 박스 */
 .benefit-note {
   margin-top: clamp(2rem, 4.5vw, 3.5rem);
-  background: #1B1F35; border: 1px solid rgba(255,255,255,0.12);
+  background: #3A1414; border: 1px solid rgba(255,255,255,0.12);
   border-radius: 14px; padding: clamp(1.4rem, 3vw, 2rem) clamp(1.3rem, 3vw, 2.25rem);
   text-align: center;
 }
