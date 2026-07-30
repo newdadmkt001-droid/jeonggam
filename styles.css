@@ -326,7 +326,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .hero__right {
   position: relative; display: flex; align-items: stretch;
   padding: clamp(1.75rem, 3.5vw, 3rem);
-  background: #000;
+  background: linear-gradient(155deg, #1f1c04 0%, #000 75%);
 }
 .hero__right::before {
   content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 1px;
