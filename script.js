@@ -319,4 +319,50 @@
       }
     });
   }
+
+  /* ---- 11. 상담 신청 팝업 (모달) ---- */
+  var cmodal = document.getElementById("consultModal");
+  if (cmodal) {
+    var cmForm = document.getElementById("cmodalForm");
+    var cmDone = document.getElementById("cmodalDone");
+    var consultForm = document.getElementById("consultForm");
+
+    var openCmodal = function (e) {
+      if (e) e.preventDefault();
+      cmForm.hidden = false;
+      cmDone.hidden = true;
+      cmodal.classList.add("is-open");
+      cmodal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+    var closeCmodal = function () {
+      cmodal.classList.remove("is-open");
+      cmodal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+
+    document.querySelectorAll('[data-modal="consult"]').forEach(function (o) {
+      o.addEventListener("click", openCmodal);
+    });
+    cmodal.querySelectorAll("[data-close]").forEach(function (c) {
+      c.addEventListener("click", closeCmodal);
+    });
+    window.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && cmodal.classList.contains("is-open")) closeCmodal();
+    });
+
+    if (consultForm) {
+      consultForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var nm = document.getElementById("cm-name").value.trim();
+        var ph = document.getElementById("cm-phone").value.trim();
+        var ag = document.getElementById("cm-agree").checked;
+        if (!nm || !ph) { alert("성함과 연락처를 입력해 주세요."); return; }
+        if (!ag) { alert("개인정보 수집·이용에 동의해 주세요."); return; }
+        // TODO: 실제 접수는 백엔드/폼서비스 연동 필요
+        cmForm.hidden = true;
+        cmDone.hidden = false;
+      });
+    }
+  }
 })();

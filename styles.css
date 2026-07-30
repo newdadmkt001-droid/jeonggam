@@ -1939,3 +1939,37 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   * { animation: none !important; transition: none !important; scroll-behavior: auto; }
   [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* ===== 상담 신청 팝업 (모달) ===== */
+.cmodal { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 1rem; }
+.cmodal.is-open { display: flex; }
+.cmodal__scrim { position: absolute; inset: 0; background: rgba(0,0,0,0.62); backdrop-filter: blur(2px); }
+.cmodal__box {
+  position: relative; z-index: 1; width: 100%; max-width: 430px;
+  background: #fff; border-radius: 16px; padding: clamp(1.4rem, 4vw, 2rem) clamp(1.3rem, 4vw, 1.9rem);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45); max-height: calc(100dvh - 2rem); overflow: auto;
+}
+.cmodal__close { position: absolute; top: 0.5rem; right: 0.75rem; background: none; border: none; font-size: 1.7rem; line-height: 1; color: #999; cursor: pointer; padding: 0.2rem 0.4rem; }
+.cmodal__title { font-size: clamp(1.2rem, 4.6vw, 1.4rem); font-weight: 800; color: #111; margin: 0 0 0.3rem; text-align: center; }
+.cmodal__sub { font-size: clamp(0.85rem, 3.4vw, 0.92rem); color: #666; margin: 0 0 1.1rem; text-align: center; word-break: keep-all; }
+.cmodal__row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-bottom: 0.65rem; }
+.cmodal__field { display: flex; flex-direction: column; gap: 0.28rem; min-width: 0; }
+.cmodal__field label { font-size: 0.8rem; font-weight: 600; color: #444; }
+.cmodal__field input, .cmodal__field select {
+  width: 100%; padding: 0.6rem 0.7rem; border: 1px solid #E2E4E8; border-radius: 8px;
+  font-size: 0.92rem; font-family: var(--font); background: #fff; color: #111;
+}
+.cmodal__field input:focus, .cmodal__field select:focus { outline: none; border-color: var(--gold-500); }
+.cmodal__field select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+.cmodal__agree { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: #555; margin: 0.5rem 0 0.9rem; }
+.cmodal__agree input { width: 16px; height: 16px; accent-color: var(--gold-600); flex-shrink: 0; }
+.cmodal__submit {
+  width: 100%; padding: 0.85rem; border: none; border-radius: 8px;
+  background: var(--gold-500); color: #1B1F35; font-weight: 800; font-size: 1rem;
+  font-family: var(--font); cursor: pointer; transition: filter 0.2s;
+}
+.cmodal__submit:hover { filter: brightness(1.05); }
+.cmodal__done { text-align: center; padding: 0.5rem 0 0.3rem; }
+.cmodal__done-ico { width: 62px; height: 62px; margin: 0 auto 1rem; border-radius: 50%; background: var(--gold-500); color: #fff; display: grid; place-items: center; font-size: 1.9rem; }
+.cmodal__done h3 { font-size: clamp(1.3rem, 5vw, 1.5rem); font-weight: 800; color: #111; margin: 0 0 0.6rem; }
+.cmodal__done p { font-size: 0.95rem; color: #666; line-height: 1.6; margin: 0 0 1.4rem; }
