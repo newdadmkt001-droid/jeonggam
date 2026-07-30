@@ -1666,8 +1666,10 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
     background: linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.96) 34%, rgba(0,0,0,0.82) 54%, rgba(0,0,0,0.48) 74%, transparent 95%);
   }
 
-  /* 안내 배너: 서브텍스트는 아래 한 줄 유지 */
-  .benefit-note__sub { white-space: nowrap; font-size: clamp(0.62rem, 2.9vw, 0.85rem); }
+  /* 안내 배너: [아이콘+제목]은 한 줄(가운데), 서브텍스트는 아래 별도 줄 가운데 */
+  .benefit-note { flex-wrap: wrap; row-gap: 0.7rem; }
+  .benefit-note__text { display: contents; }
+  .benefit-note__sub { flex-basis: 100%; text-align: center; white-space: nowrap; font-size: clamp(0.62rem, 2.9vw, 0.85rem); }
 
   /* 프로세스 5단계 제목 글자 키움 */
   .process__title { font-size: clamp(1.35rem, 5.2vw, 1.6rem); }
