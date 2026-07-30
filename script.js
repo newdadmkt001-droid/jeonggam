@@ -15,6 +15,16 @@
     return "메인";
   })();
 
+  /* ---- 0-2. 구글시트 전송 ---- */
+  /* ↓↓↓ 앱스스크립트 웹앱 URL(.../exec)을 아래 따옴표 안에 붙여넣으세요 ↓↓↓ */
+  var SHEET_ENDPOINT = "";
+  function postLead(data) {
+    if (!SHEET_ENDPOINT) return;
+    try {
+      fetch(SHEET_ENDPOINT, { method: "POST", mode: "no-cors", body: new URLSearchParams(data) }).catch(function () {});
+    } catch (e) {}
+  }
+
   /* ---- 1. 헤더 스크롤 상태 ---- */
   var header = document.getElementById("header");
   if (header) {
@@ -266,7 +276,13 @@
         note.classList.add("is-err");
         return;
       }
-      // TODO: 실제 접수는 이메일/폼 서비스(예: Formspree) 또는 백엔드 연동 필요
+      postLead({
+        name: name,
+        phone: phone,
+        debt: (form.querySelector("#cf-debt") || {}).value || "",
+        time: (form.querySelector("#cf-time") || {}).value || "",
+        source: window.__leadSource || "메인"
+      });
       note.textContent = "상담 신청이 접수되었습니다. 곧 연락드리겠습니다. 감사합니다.";
       note.classList.add("is-ok");
       form.reset();
@@ -370,7 +386,13 @@
         var ag = document.getElementById("cm-agree").checked;
         if (!nm || !ph) { alert("성함과 연락처를 입력해 주세요."); return; }
         if (!ag) { alert("개인정보 수집·이용에 동의해 주세요."); return; }
-        // TODO: 실제 접수는 백엔드/폼서비스 연동 필요
+        postLead({
+          name: nm,
+          phone: ph,
+          debt: (document.getElementById("cm-debt") || {}).value || "",
+          time: (document.getElementById("cm-time") || {}).value || "",
+          source: window.__leadSource || "메인"
+        });
         cmForm.hidden = true;
         cmDone.hidden = false;
       });
