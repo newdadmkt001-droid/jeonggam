@@ -176,21 +176,11 @@
   if ("IntersectionObserver" in window && counters.length) {
     var heroIsMobile = window.matchMedia("(max-width: 600px)").matches;
     if (heroIsMobile) {
-      /* 모바일: 화면에 보이는 동안 반복 카운트업 */
-      var heroRunAll = function () { counters.forEach(animateCount); };
-      var heroTimer = null;
-      var heroTarget = document.querySelector(".hero__stats") || counters[0];
-      var hio = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            heroRunAll();
-            if (!heroTimer) heroTimer = window.setInterval(heroRunAll, 4000);
-          } else if (heroTimer) {
-            window.clearInterval(heroTimer); heroTimer = null;
-          }
-        });
-      }, { threshold: 0.4 });
-      hio.observe(heroTarget);
+      /* 모바일: 카운트업 효과 없이 최종 값만 바로 표시 */
+      counters.forEach(function (el) {
+        var t = parseInt(el.getAttribute("data-count"), 10);
+        el.textContent = t.toLocaleString("ko-KR");
+      });
     } else {
       var cio = new IntersectionObserver(
         function (entries) {
