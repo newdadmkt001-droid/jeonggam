@@ -6,12 +6,14 @@
 
   /* ---- 0. 유입페이지 판별 (경로/파라미터 기반) ---- */
   window.__leadSource = (function () {
-    var p = location.pathname.toLowerCase();
-    if (p.indexOf("cafe") > -1) return "카페";
-    if (p.indexOf("blog") > -1) return "블로그";
-    var q = new URLSearchParams(location.search).get("src");
-    if (q === "cafe") return "카페";
-    if (q === "blog") return "블로그";
+    // 경로 첫 구간을 우선 사용하고, 없으면 ?src= 파라미터로 대체
+    var seg = location.pathname.toLowerCase().replace(/^\/+|\/+$/g, "").split("/")[0];
+    var q = (new URLSearchParams(location.search).get("src") || "").toLowerCase();
+    var key = seg || q;
+    if (!key) return "메인";
+    if (key.indexOf("cafe") > -1) return "카페";
+    if (key.indexOf("blog") > -1) return "블로그";
+    if (/^[1-4]$/.test(key)) return "서브" + key;
     return "메인";
   })();
 
