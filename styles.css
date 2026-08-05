@@ -709,7 +709,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   /* 참고 이미지처럼 위아래 아치형 오벌(옆면은 살짝 곧게) */
   border-radius: 50% / 44%;
   background-color: #e9e5dd;
-  background-size: cover; background-position: center 34px; background-repeat: no-repeat;
+  background-size: 112%; background-position: center 3.9%; background-repeat: no-repeat;
 }
 .lawyer__desc { display: grid; gap: 1.15rem; }
 .lawyer__desc p { font-size: 1rem; line-height: 1.85; color: var(--text-muted); }
